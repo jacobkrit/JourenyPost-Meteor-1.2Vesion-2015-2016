@@ -1,0 +1,275 @@
+
+<template name="trip_details">
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80253065-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  <body>
+    <nav class="white z-depth-1" role="navigation">
+      <div class="nav-wrapper container">
+        <a  href="#" class="brand-logo" >
+          <span class="bold center orange-text  text-lighten-2" style="font-weight:med; ">Profile </span>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li >
+          </li>
+        </ul>
+
+        <ul id="nav-mobile"  class="side-nav  collection">
+          <li class=" collection-item  ">          <h5 class="bold center orange-text  text-lighten-2" style="font-weight:bold; ">JOURNEYPOST</h5></li>
+          <li id="gohome" class=" collection-item"><a   class="blue-text flow-text waves-effect waves-light"><strong>Home   </strong></a></li>
+
+        {{#each name}}
+
+            <li  class=" collection-item"><a logout  class="blue-text flow-text waves-effect waves-light"><strong>  logout  </strong></a></li>
+          {{/each}}
+        </ul>
+        <a id="gopdetails" class="grey-text hide-on-med-and-up"><i class="material-icons">keyboard_arrow_left</i></a>
+        <a href="#" data-activates="nav-mobile" class="button-collapse grey-text"></a>
+
+      </div>
+
+
+    </nav>
+
+    <img src="images/IMG_9896.jpg" class="z-depth-1" width="100%" height="auto" >
+
+    <div class="row  container  " >
+      <div  class="col l9 offset-l1 s12   " >
+        <div class="card-panel white z-depth-1 ">
+          <div class="progress">
+      <div class="determinate blue" style="width: 40%"></div>
+  </div>
+  <br>
+          <span class="blue-text  flow-text">Enter your personal details
+   </span><br><br>
+          <div class="row">
+<form class="col s12">
+<div class="row">
+
+  <div class="input-field col s12">
+    <select id="Number_of_travellers">
+      <option value="1"> 1</option>
+      <option value="2"> 2</option>
+      <option value="3"> 3</option>
+      <option value="4"> 4</option>
+      <option value="5"> 5</option>
+      <option value="6"> 6</option>
+      <option value="7"> 7</option>
+      <option value="8"> 8</option>
+      <option value="9"> 9+</option>
+    </select>
+    <label>Number of travellers</label>
+  </div>
+
+  <div class="input-field col s12">
+    <select id="travel_type">
+      <option value="family">Family</option>
+      <option value="Friends">Friends</option>
+      <option value="Couple">Couple</option>
+      <option value="Single">Single</option>
+
+    </select>
+    <label >Travel type</label>
+  </div>
+
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+     <div class="input-field col s12">
+       <select  id="min_age">
+         <option value="14"></option>
+
+         <option value="14">less than 14</option>
+               <option value="15">15</option>
+               <option value="16">16</option>
+               <option value="17">17</option>
+               <option value="18">18</option>
+               <option value="19">19</option>
+               <option value="20">20</option>
+               <option value="21">21</option>
+               <option value="22">22</option>
+               <option value="23">23</option>
+               <option value="24">24</option>
+               <option value="25">25</option>
+               <option value="26">26</option>
+               <option value="27">27</option>
+               <option value="28">28</option>
+               <option value="29">29</option>
+               <option value="30">30</option>
+               <option value="31">31</option>
+               <option value="32">32</option>
+               <option value="33">33</option>
+               <option value="34">34</option>
+               <option value="35">35</option>
+               <option value="36">36</option>
+               <option value="37">37</option>
+               <option value="38">38</option>
+               <option value="39">39</option>
+               <option value="40">40</option>
+               <option value="41">41</option>
+               <option value="42">42</option>
+               <option value="43">43</option>
+               <option value="44">44</option>
+               <option value="45">45</option>
+               <option value="46">46</option>
+               <option value="47">47</option>
+               <option value="48">48</option>
+               <option value="49">49</option>
+               <option value="50">50</option>
+               <option value="51">51</option>
+               <option value="52">52</option>
+               <option value="53">52++</option>
+
+       </select>
+       <label>min age</label>
+     </div>
+
+     <div class="input-field col s12" id="max" >
+       <select id="max_age">
+         <option value="53"></option>
+
+         <option value="14">less than 14</option>
+               <option value="15">15</option>
+               <option value="16">16</option>
+               <option value="17">17</option>
+               <option value="18">18</option>
+               <option value="19">19</option>
+               <option value="20">20</option>
+               <option value="21">21</option>
+               <option value="22">22</option>
+               <option value="23">23</option>
+               <option value="24">24</option>
+               <option value="25">25</option>
+               <option value="26">26</option>
+               <option value="27">27</option>
+               <option value="28">28</option>
+               <option value="29">29</option>
+               <option value="30">30</option>
+               <option value="31">31</option>
+               <option value="32">32</option>
+               <option value="33">33</option>
+               <option value="34">34</option>
+               <option value="35">35</option>
+               <option value="36">36</option>
+               <option value="37">37</option>
+               <option value="38">38</option>
+               <option value="39">39</option>
+               <option value="40">40</option>
+               <option value="41">41</option>
+               <option value="42">42</option>
+               <option value="43">43</option>
+               <option value="44">44</option>
+               <option value="45">45</option>
+               <option value="46">46</option>
+               <option value="47">47</option>
+               <option value="48">48</option>
+               <option value="49">49</option>
+               <option value="50">50</option>
+               <option value="51">51</option>
+               <option value="52">52</option>
+               <option value="53">over 52</option>
+
+       </select>
+       <label>max age</label>
+     </div>
+
+
+
+
+
+
+<button next class="btn waves-effect waves-light right blue">Submit
+<i class="material-icons right">send</i>
+</button>
+</form>
+
+</div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+
+
+
+
+
+
+  <script type="text/javascript">
+  $('.parallax').parallax();
+  $('.button-collapse').sideNav({
+      menuWidth: 240, // Default is 240
+      edge: 'right', // Choose the horizontal origin
+      closeOnClick: false // Closes side-nav on <a> clicks, useful for Angular/Meteor
+    }
+  );
+  $('.datepicker').pickadate({
+   selectMonths: true, // Creates a dropdown to control month
+   selectYears: 15 // Creates a dropdown of 15 years to control year
+ });
+
+
+   $(document).ready(function() {
+       $('select').material_select();
+     });
+
+
+     $("#gohome").click(function(){
+       window.location.href = '/';
+
+     });
+     $("#gopdetails").click(function(){
+       window.location.href = '/personal-details';
+
+     });
+
+
+     $('#travel_type').change(function(){
+     value = $(this).val();
+     if (value =="Single") {
+        $('#max').hide();
+
+     }
+});
+
+
+
+  </script>
+</template>

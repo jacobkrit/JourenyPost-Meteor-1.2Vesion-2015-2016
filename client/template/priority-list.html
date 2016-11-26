@@ -1,0 +1,428 @@
+
+<template name="priority_list">
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80253065-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script type="text/javascript">
+    rest1 =1;
+    rest2 =1;
+    rest3 =1;
+    rest4 =1;
+    fun1 =1;
+    fun2 =1;
+    fun3 =1;
+    fun4 =1;
+    fun5 =1;
+
+</script>
+
+
+
+
+
+
+
+      <body>
+    <nav class="white z-depth-1" role="navigation">
+      <div class="nav-wrapper container">
+        <a  href="#" class="brand-logo" >
+          <span class="bold center orange-text  text-lighten-2" style="font-weight:med; ">Profile </span>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li >
+          </li>
+        </ul>
+
+        <ul id="nav-mobile"  class="side-nav  collection">
+          <li class=" collection-item  ">          <h5 class="bold center orange-text  text-lighten-2" style="font-weight:bold; ">JOURNEYPOST</h5></li>
+          <li id="gohome" class=" collection-item"><a   class="blue-text flow-text waves-effect waves-light"><strong>Home   </strong></a></li>
+
+        {{#each name}}
+
+            <li  class=" collection-item"><a logout  class="blue-text flow-text waves-effect waves-light"><strong>  logout  </strong></a></li>
+          {{/each}}
+        </ul>
+        <a id="gotrip" class="grey-text hide-on-med-and-up"><i class="material-icons">keyboard_arrow_left</i></a>
+        <a href="#" data-activates="nav-mobile" class="button-collapse grey-text"></a>
+
+      </div>
+
+
+    </nav>
+
+    <img src="images/EEMG_4644.JPG" class="z-depth-1" width="100%" height="auto" >
+
+    <div class="row  container  " >
+      <div  class="col l9 offset-l1 s12   " >
+        <div class="card-panel white z-depth-1 ">
+          <div class="progress">
+      <div class="determinate blue" style="width: 60%"></div>
+  </div>
+  <br>
+          <span class="blue-text  flow-text">Set your preferences
+
+   </span><br>
+   <span class="grey-text">Rate the activities according to your preferences
+ </span>
+ <br><br>
+          <div class="row">
+<form class="col s12">
+<div class="row">
+
+
+
+  <h4>Restaurant</h4>
+
+  <ul class="collection">
+      <li id="first" class="first   collection-item avatar">
+          <img src="images/fastd.jpg" min-width:299px; rad alt="" class="circle ">
+
+
+        <span class="title blue-text darken-3"><strong>Fast Dining</strong></span>
+
+
+        <div ena id="Restaurant1" class="right" style="font-size: 10%" ></div>
+        <div class="counter "></div>
+      </li>
+
+
+
+
+      <li id="second" class=" collection-item avatar">
+        <img src="images/restaurant-1343327_640.jpg" min-width:299px; rad alt="" class="circle ">
+
+
+
+        <span class="title blue-text darken-3"><strong>Casual Dining</strong></span>
+
+
+        <div ena id="Restaurant2" class="right"></div>
+        <div class="counter "></div>
+
+      </li>
+
+
+
+
+      <li id="third" class=" collection-item avatar" value="0">
+
+        <img src="images/salmon-518032_640.jpg" min-width:299px; rad alt="" class="circle ">
+
+        <span class="title blue-text darken-3"><strong>Fine Dining</strong></span>
+
+
+        <div ena id="Restaurant3" class="right"></div>
+        <div class="counter "></div>
+      </li>
+
+
+
+
+      <li id="fourth" class="fourth collection-item avatar">
+        <img src="images/breakfast-498480_640.jpg" min-width:299px; rad alt="" class="circle ">
+
+
+
+        <span class="title blue-text darken-3"><strong>Café,<br>Bistro,<br>Pastries</strong></span>
+
+
+        <div ena id="Restaurant4" class="right"></div>
+        <div class="counter "></div>
+
+      </li>
+
+
+
+
+
+    </ul>
+
+
+
+      <h4>fun</h4>
+
+      <ul class="collection">
+          <li id="first" class="first   collection-item avatar">
+              <img src="images/live-concert-388160_640.jpg" min-width:299px; rad alt="" class="circle ">
+
+
+            <span class="title blue-text darken-3"><strong>Clubs</strong></span>
+
+
+              <div ena id="fun1" class="right"></div>
+            <div class="counter "></div>
+          </li>
+
+
+
+
+          <li id="second" class=" collection-item avatar">
+            <img src="images/glasses-1477080_640.jpg" min-width:299px; rad alt="" class="circle ">
+
+
+
+            <span class="title blue-text darken-3"><strong>Bars</strong></span>
+
+
+            <div ena id="fun2" class="right"></div>
+            <div class="counter "></div>
+
+          </li>
+
+
+
+
+          <li id="third" class=" collection-item avatar" value="0">
+
+            <img src="images/gyros-674425_640.jpg" min-width:299px; rad alt="" class="circle ">
+
+
+
+            <span class="title blue-text darken-3"><strong>Traditional <br>Greek Fests</strong></span>
+
+                                    <div ena id="fun3" class="right"></div>
+                                    <div class="counter "></div>
+
+          </li>
+
+
+
+
+          <li id="fourth" class="fourth collection-item avatar">
+            <img src="images/film-reel-147631_640.png" min-width:299px; rad alt="" class="circle ">
+
+
+
+
+            <span class="title blue-text darken-3"><strong>Cinemas, Theaters, <br>Festivals</strong></span>
+            <div ena id="fun4" class="right"></div>
+            <div class="counter "></div>
+
+
+          </li>
+          <li id="fifth" class="fourth collection-item avatar">
+            <img src="images/audience-868074_640.jpg" min-width:299px; rad alt="" class="circle ">
+
+
+
+
+            <span class="title blue-text darken-3"><strong>Alternative club</strong></span>
+            <div ena id="fun5" class="right"></div>
+            <div class="counter "></div>
+
+
+          </li>
+
+
+
+
+
+
+        </ul>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+  <button next class="btn waves-effect waves-light right blue">Submit
+<i class="material-icons right">send</i>
+</button>
+</form>
+
+</div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+  </body>
+
+<script type="text/javascript">
+$("#gohome").click(function(){
+  window.location.href = '/';
+
+});
+$("#gotrip").click(function(){
+  window.location.href = '/trip-details';
+
+});
+
+
+
+
+
+</script>
+
+
+
+
+  <script type="text/javascript">
+  $('.parallax').parallax();
+  $('.button-collapse').sideNav({
+      menuWidth: 240, // Default is 240
+      edge: 'right', // Choose the horizontal origin
+      closeOnClick: false // Closes side-nav on <a> clicks, useful for Angular/Meteor
+    }
+  );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--starts  stars-->
+<script type="text/javascript">
+alert1=44;
+alert2=44;
+alert3=44;
+alert4=44;
+alert5=44;
+alert6=44;
+alert7=44;
+alert8=44;
+alert9=44;
+
+$(function () {
+
+  $("#Restaurant1").rateYo({
+  fullStar: true,
+    onChange: function (rating, rateYoInstance) {
+      $(this).next().text(rating);
+      rest1=rating;
+      alert1=1;
+    }
+  });
+
+  $("#Restaurant2").rateYo({
+    fullStar: true,
+
+    onChange: function (rating, rateYoInstance) {
+
+      $(this).next().text(rating);
+      rest2=rating;
+      alert2=1;
+
+    }
+  });
+  $("#Restaurant3").rateYo({
+    fullStar: true,
+
+    onChange: function (rating, rateYoInstance) {
+
+      $(this).next().text(rating);
+      rest3=rating;
+      alert3=1;
+
+    }
+  });
+  $("#Restaurant4").rateYo({
+    fullStar: true,
+
+    onChange: function (rating, rateYoInstance) {
+
+      $(this).next().text(rating);
+      rest4=rating;
+      alert4=1;
+
+    }
+  });
+
+
+
+    $("#fun1").rateYo({
+      fullStar: true,
+
+      onChange: function (rating, rateYoInstance) {
+
+        $(this).next().text(rating);
+        fun1=rating;
+        alert5=1;
+
+      }
+    });
+
+    $("#fun2").rateYo({
+      fullStar: true,
+
+      onChange: function (rating, rateYoInstance) {
+
+        $(this).next().text(rating);
+        fun2=rating;
+        alert6=1;
+
+      }
+    });
+    $("#fun3").rateYo({
+      fullStar: true,
+
+      onChange: function (rating, rateYoInstance) {
+
+        $(this).next().text(rating);
+        fun3=rating;
+        alert7=1;
+
+      }
+    });
+    $("#fun4").rateYo({
+      fullStar: true,
+
+      onChange: function (rating, rateYoInstance) {
+
+        $(this).next().text(rating);
+        fun4=rating;
+        alert8=1;
+
+      }
+    });
+    $("#fun5").rateYo({
+      fullStar: true,
+
+      onChange: function (rating, rateYoInstance) {
+
+        $(this).next().text(rating);
+        fun5=rating;
+        alert9=1;
+
+      }
+    });
+
+});
+
+</script>
+
+</template>

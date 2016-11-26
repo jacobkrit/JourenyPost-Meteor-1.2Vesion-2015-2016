@@ -1,0 +1,168 @@
+
+<template name="vuides">
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80253065-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+      <body>
+    <nav class="white z-depth-1" role="navigation">
+      <div class="nav-wrapper container">
+        <a  href="#" class="brand-logo" >
+          <span class="bold center orange-text  text-lighten-2" style="font-weight:med; ">Profile </span>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li >
+          </li>
+        </ul>
+
+        <ul id="nav-mobile"  class="side-nav  collection">
+          <li class=" collection-item  ">          <h5 class="bold center orange-text  text-lighten-2" style="font-weight:bold; ">JOURNEYPOST</h5></li>
+          <li id="gohome" class=" collection-item"><a   class="blue-text flow-text waves-effect waves-light"><strong>Home   </strong></a></li>
+
+        {{#each name}}
+
+            <li  class=" collection-item"><a logout  class="blue-text flow-text waves-effect waves-light"><strong>  logout  </strong></a></li>
+          {{/each}}
+        </ul>
+        <a id="gobuild" class="grey-text hide-on-med-and-up"><i class="material-icons">keyboard_arrow_left</i></a>
+        <a href="#" data-activates="nav-mobile" class="button-collapse grey-text"></a>
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </nav>
+
+    <img src="images/IMG_9896.jpg" class="z-depth-1" width="100%" height="auto" >
+
+    <div class="row  container  " >
+      <div  class="col l9 offset-l1 s12   " >
+        <div class="card-panel white z-depth-1 ">
+          <div class="progress">
+      <div class="determinate blue" style="width: 100%"></div>
+  </div>
+  <br>
+          <span class="blue-text  flow-text">Choose your Vuide
+
+   </span><br>
+   <span class="grey-text">Vuides are locals that are very familiar with Naxos. Each one has suggestions for your journey. Here is who matched best with you.
+   </span>
+   <br><br>
+   <div class="divider"></div>
+   <br><br>
+
+   <div class="row">
+{{#each vuide_program}}
+     <div class="col s12 m6">
+       <div class="card large">
+         <div class="card-image">
+           <i class="material-icons yellow-text" style="font-size:400%;position:absolute;z-index: 100;margin:3%">assistant</i>
+           <img max-height="50px" src="{{img_path}}">
+         </div>
+         <div class="card-content">
+           <span class="card-title"><b class="blue-text">{{Name}} {{Age}}</b></span>
+            <p style="font-size: 10.5px" >{{aboutme}}</p>
+         </div>
+         <div class="card-action">
+           <a href="#" class="blue-text"  select style = "float:right; margin-right:0px">Choose</a>
+         </div>
+       </div>
+     </div>
+     {{/each}}
+     {{#each vuide_program1}}
+
+     <div class="col s12 m6">
+       <div class="card large">
+         <div class="card-image">
+           <img src="{{img_path}}">
+         </div>
+         <div class="card-content">
+           <span class="card-title"><b class="blue-text">{{Name}} {{Age}}</b></span>
+           <p style="font-size: 10.5px" >{{aboutme}}</p>
+         </div>
+         <div class="card-action">
+           <a href="#" select class="blue-text" style="    float:right; margin-right:0px">Choose</a>
+         </div>
+       </div>
+     </div>
+     {{/each}}
+
+
+   </div>
+
+   </div>
+
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+  </body>
+
+
+
+
+    <script type="text/javascript">
+    $('.parallax').parallax();
+    $('.button-collapse').sideNav({
+        menuWidth: 240, // Default is 240
+        edge: 'right', // Choose the horizontal origin
+        closeOnClick: false // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      }
+    );
+    $("#gohome").click(function(){
+      window.location.href = '/';
+
+    });
+
+    $("#gobuild").click(function(){
+      window.location.href = '/building';
+
+    });
+
+    </script>
+
+
+  <script type="text/javascript">
+  $('.parallax').parallax();
+  $('.button-collapse').sideNav({
+      menuWidth: 240, // Default is 240
+      edge: 'right', // Choose the horizontal origin
+      closeOnClick: false // Closes side-nav on <a> clicks, useful for Angular/Meteor
+    }
+  );
+  $( "#plin1" ).hide();
+  $( "#plin2" ).hide();
+  $( "#plin3" ).hide();
+  $( "#plin4" ).hide();
+
+
+  </script>
+
+
+</template>

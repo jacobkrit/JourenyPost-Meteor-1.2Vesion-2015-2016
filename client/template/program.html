@@ -1,0 +1,4095 @@
+<template name="program">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-80253065-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+      <body>
+
+
+
+
+
+        <a href="https://docs.google.com/forms/d/13cohN2JPrZ02Cy58CMc0QXhqpjTYFIoM-5iRpAG1nTc/viewform"  target="_blank" class="btn-floating btn-large waves-effect waves-light blue" style="position: absolute; right:10px; top: 90%;"><i class="material-icons">feedback</i></a>
+
+
+
+
+
+
+
+
+
+
+
+
+    <nav class="white z-depth-1" role="navigation">
+      <div class="nav-wrapper container">
+        <a  href="#" class="brand-logo" >
+          <span class="bold center orange-text  text-lighten-2" style="font-weight:med; ">Program </span>
+        </a>
+        <ul class="right hide-on-med-and-down">
+
+          <li >
+            <a href="#" logout class="grey-text">logout</a>
+          </li>
+        </ul>
+
+
+
+        <ul id="nav-mobile"  class="side-nav  collection">
+          <li class=" collection-item  ">          <h5 class="bold center orange-text  text-lighten-2" style="font-weight:bold; ">JOURNEYPOST</h5></li>
+          <li id="gohome" class=" collection-item"><a   class="blue-text flow-text waves-effect waves-light"><strong>Home   </strong></a></li>
+
+        {{#each name}}
+
+            <li  class=" collection-item"><a logout  class="blue-text flow-text waves-effect waves-light"><strong>  logout  </strong></a></li>
+          {{/each}}
+        </ul>
+
+        <ul id="nav-mobile" class="side-nav ">
+          <li class=" blue z-depth-1">          <h4 class="bold center orange-text  text-lighten-2" style="font-weight:bold; text-shadow: 2px 6px 15px black">JOURNEYPOST</h4>
+  </li>
+          <li ><a id="gohome"  class="blue-text flow-text waves-effect waves-light"><strong>Home</strong></a></li>
+          <li><a logout  class="blue-text flow-text waves-effect waves-light"><strong>logout</strong></a></li>
+
+        </ul>
+        <a id="gohome3" class="grey-text hide-on-med-and-up"><i class="material-icons">keyboard_arrow_left</i></a>
+        <a href="#" data-activates="nav-mobile" class="button-collapse grey-text"></a>
+
+      </div>
+
+
+    </nav>
+<div class="container row">
+<div class="">
+
+    <ul class="pagination ">
+       <li id="1" day1 class="active blue waves-effect waves-light"><a href="#!">Day 1</a></li>
+       <li id="2" day2 class=" waves-effect waves-light"><a href="#!">Day 2</a></li>
+       <li id="3" day3 class=" waves-effect waves-light"><a href="#!">Day 3</a></li>
+      
+     </ul>
+   </div>
+<br>
+
+
+<div class="day1">
+
+<ul class="collapsible z-depth-0" data-collapsible="expandable">
+   <li>
+     <div class="collapsible-header active blue white-text flow-text center-align" style>Breakfast</div>
+     {{#each breakfast_d1}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd1b1 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test3"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people" class="col s12">
+                  <div class="flow-text blue-text">People</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test3" class="col s12">
+                  <div class="flow-text blue-text"> Food & Drinks
+</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+    </li>
+
+   <li>
+     <div class="collapsible-header active blue white-text flow-text center-align" style> Morning</div>
+     {{#each morning1_d1}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd1m1 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description1"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people1"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test31"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices1"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours1"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description1" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people1" class="col s12">
+                  <div class="flow-text blue-text">History</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test31" class="col s12">
+                  <div class="flow-text blue-text"> What to see</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices1" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours1" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+     {{#each morning2_d1}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd1m2 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description3"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people3"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test33"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices3"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours3"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description3" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people3" class="col s12">
+                  <div class="flow-text blue-text">History</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test33" class="col s12">
+                  <div class="flow-text blue-text"> What to see</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices3" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours3" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+   </li>
+   <li>
+     <div class="collapsible-header active blue white-text flow-text center-align" style>Lunch</div>
+     {{#each lunch_d1}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd1l1 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description2"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people2"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test32"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices2"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours2"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description2" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people2" class="col s12">
+                  <div class="flow-text blue-text">People</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">People</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test32" class="col s12">
+                  <div class="flow-text blue-text">Food & Drinks</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices2" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours2" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+   </li>
+   <li>
+     <div class="collapsible-header  blue white-text flow-text center-align" style>afternoon</div>
+     {{#each afternoon1_d1}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd1a1 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description5"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people5"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test35"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices5"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours5"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description5" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people5" class="col s12">
+                  <div class="flow-text blue-text">History</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test35" class="col s12">
+                  <div class="flow-text blue-text"> What to see
+</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices5" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours5" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+     {{#each afternoon2_d1}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd1a2 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description6"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people6"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test36"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices6"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours6"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description6" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people6" class="col s12">
+                  <div class="flow-text blue-text">History</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test36" class="col s12">
+                  <div class="flow-text blue-text"> What to see
+</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices6" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours6" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+      </li>
+
+      <li>
+        <div class="collapsible-header  blue white-text flow-text center-align" style>Night</div>
+        {{#each night_d1}}
+        <div class="body">
+          <div class="row ">
+           <div class="col s12 m8 offset-l2">
+             <div class="card large">
+               <div class="card-image waves-effect waves-block waves-light ">
+                 <img class="activator" src="{{img_path1}}">
+               </div>
+               <div class="card-content">
+                 <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+                 <p style="padding: 0px;">{{Subtitle}}</p>
+               </div>
+               <div class="card-action">
+                 <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+                 <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+                 <a  refreshd1n1 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+               </div>
+               <div class="card-reveal">
+                 <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+                 <div class="row">
+                   <div class="col s12">
+                     <ul class="tabs" style="width:100%">
+                       <li class="tab col s2" style="min-width:20%"><a href="#description699"><i class="material-icons blue-text">home</i> </a></li>
+                       <li class="tab col s2 " style="min-width:20%"><a href="#people699"><i class="material-icons blue-text">face</i></a></li>
+                       <li class="tab col s2 " style="min-width:20%"><a href="#test3699"><i class="material-icons blue-text">crop_original</i></a></li>
+                       <li class="tab col s2 " style="min-width:20%"><a href="#prices699"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                       <li class="tab col s2 " style="min-width:20%"><a href="#hours699"><i class="material-icons blue-text">alarm</i> </a></li>
+                     </ul>
+                     <div class="indicator"></div>
+                     <br>
+                   </div>
+
+                   <div id="description699" class="col s12">
+                     <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                     <p style="padding: 0px;">{{Description}}</p>
+                     <br>
+                     <div class="flow-text blue-text">MySecret</div>
+                     <p style="padding: 0px;">{{Description_Secret}}</p>
+                   </div>
+                   <div style="display: none;" id="people699" class="col s12">
+                     <div class="flow-text blue-text">People</div>
+                     <p style="padding: 0px;">{{People_History}}</p>
+                     <br>
+                     <div class="flow-text blue-text">MySecret</div>
+                     <p style="padding: 0px;">{{People_Secret}}</p>
+                   </div>
+                   <div style="display: none;" id="test3699" class="col s12">
+                     <div class="flow-text blue-text"> Food & Drinks
+</div>
+                     <p style="padding: 0px;">{{Suggestion_See}}</p>
+                     <br>
+                     <div class="flow-text blue-text">MySecret</div>
+                     <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                   </div>
+                   <div style="display: none;" id="prices699" class="col s12">
+                     <div class="flow-text blue-text">Prices</div>
+                     <p style="padding: 0px;">{{Money}}</p>
+                     <br>
+                     <div class="flow-text blue-text">MySecret</div>
+                     <p style="padding: 0px;">{{Money_Secret}}</p>
+                   </div>
+                   <div style="display: none;" id="hours699" class="col s12">
+                     <div class="flow-text blue-text">Hours</div>
+                     <p style="padding: 0px;">{{Time}}</p>
+                     <br>
+                     <div class="flow-text blue-text">MySecret</div>
+                     <p style="padding: 0px;">{{Time_Secret}}</p>
+                   </div>
+                 </div>
+
+
+               </div>
+             </div>
+
+           </div>
+         </div>
+
+         </div>
+         <script type="text/javascript">
+         $(document).ready(function(){
+           $('ul.tabs').tabs();
+         });
+         $(document).ready(function(){
+           $('ul.tabs').tabs('select_tab', 'tab_id');
+         });
+         </script>
+        {{/each}}
+      </li>
+ </ul>
+</div>
+
+
+<!---  day 2 -->
+
+
+<div class="day2">
+
+<ul class="collapsible z-depth-0" data-collapsible="expandable">
+   <li>
+     <div class="collapsible-header active blue white-text flow-text center-align" style>Breakfast</div>
+     {{#each breakfast_d2}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd2b1 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description21"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people21"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test321"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices21"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours21"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description21" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people21" class="col s12">
+                  <div class="flow-text blue-text">People</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test321" class="col s12">
+                  <div class="flow-text blue-text"> Food & Drinks
+</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices21" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours21" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+    </li>
+
+   <li>
+     <div class="collapsible-header active blue white-text flow-text center-align" style> Morning</div>
+     {{#each morning1_d2}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd2m1 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description122"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people122"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test3122"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices122"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours122"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description122" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people122" class="col s12">
+                  <div class="flow-text blue-text">History</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test3122" class="col s12">
+                  <div class="flow-text blue-text"> What to see</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices122" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours122" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+     {{#each morning2_d2}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd2m2 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description323"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people323"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test3323"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices323"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours323"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description323" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people323" class="col s12">
+                  <div class="flow-text blue-text">History</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test3323" class="col s12">
+                  <div class="flow-text blue-text"> What to see</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices323" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours323" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+   </li>
+   <li>
+     <div class="collapsible-header active blue white-text flow-text center-align" style>Lunch</div>
+     {{#each lunch_d2}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd2l1 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description224"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people224"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test3224"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices224"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours224"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description224" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people224" class="col s12">
+                  <div class="flow-text blue-text">People</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test3224" class="col s12">
+                  <div class="flow-text blue-text"> Food & Drinks</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices224" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours224" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+   </li>
+   <li>
+     <div class="collapsible-header  blue white-text flow-text center-align" style>afternoon</div>
+     {{#each afternoon1_d2}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd2a1 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description525"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people525"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test3525"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices525"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours525"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description525" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people525" class="col s12">
+                  <div class="flow-text blue-text">History</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test3525" class="col s12">
+                  <div class="flow-text blue-text"> What to see
+</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices525" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours525" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+     {{#each afternoon2_d2}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd2a2 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description626"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people626"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test3626"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices626"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours626"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description626" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people626" class="col s12">
+                  <div class="flow-text blue-text">History</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test3626" class="col s12">
+                  <div class="flow-text blue-text"> What to see
+</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices626" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours626" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+      </li>
+
+      <li>
+        <div class="collapsible-header  blue white-text flow-text center-align" style>Night</div>
+        {{#each night_d2}}
+        <div class="body">
+          <div class="row ">
+           <div class="col s12 m8 offset-l2">
+             <div class="card large">
+               <div class="card-image waves-effect waves-block waves-light ">
+                 <img class="activator" src="{{img_path1}}">
+               </div>
+               <div class="card-content">
+                 <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+                 <p style="padding: 0px;">{{Subtitle}}</p>
+               </div>
+               <div class="card-action">
+                 <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+                 <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+                 <a  refreshd2n1 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+               </div>
+               <div class="card-reveal">
+                 <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+                 <div class="row">
+                   <div class="col s12">
+                     <ul class="tabs" style="width:100%">
+                       <li class="tab col s2" style="min-width:20%"><a href="#description627"><i class="material-icons blue-text">home</i> </a></li>
+                       <li class="tab col s2 " style="min-width:20%"><a href="#people627"><i class="material-icons blue-text">face</i></a></li>
+                       <li class="tab col s2 " style="min-width:20%"><a href="#test3627"><i class="material-icons blue-text">crop_original</i></a></li>
+                       <li class="tab col s2 " style="min-width:20%"><a href="#prices627"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                       <li class="tab col s2 " style="min-width:20%"><a href="#hours627"><i class="material-icons blue-text">alarm</i> </a></li>
+                     </ul>
+                     <div class="indicator"></div>
+                     <br>
+                   </div>
+
+                   <div id="description627" class="col s12">
+                     <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                     <p style="padding: 0px;">{{Description}}</p>
+                     <br>
+                     <div class="flow-text blue-text">MySecret</div>
+                     <p style="padding: 0px;">{{Description_Secret}}</p>
+                   </div>
+                   <div style="display: none;" id="people627" class="col s12">
+                     <div class="flow-text blue-text">People</div>
+                     <p style="padding: 0px;">{{People_History}}</p>
+                     <br>
+                     <div class="flow-text blue-text">MySecret</div>
+                     <p style="padding: 0px;">{{People_Secret}}</p>
+                   </div>
+                   <div style="display: none;" id="test3627" class="col s12">
+                     <div class="flow-text blue-text"> Food & Drinks
+</div>
+                     <p style="padding: 0px;">{{Suggestion_See}}</p>
+                     <br>
+                     <div class="flow-text blue-text">MySecret</div>
+                     <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                   </div>
+                   <div style="display: none;" id="prices627" class="col s12">
+                     <div class="flow-text blue-text">Prices</div>
+                     <p style="padding: 0px;">{{Money}}</p>
+                     <br>
+                     <div class="flow-text blue-text">MySecret</div>
+                     <p style="padding: 0px;">{{Money_Secret}}</p>
+                   </div>
+                   <div style="display: none;" id="hours627" class="col s12">
+                     <div class="flow-text blue-text">Hours</div>
+                     <p style="padding: 0px;">{{Time}}</p>
+                     <br>
+                     <div class="flow-text blue-text">MySecret</div>
+                     <p style="padding: 0px;">{{Time_Secret}}</p>
+                   </div>
+                 </div>
+
+
+               </div>
+             </div>
+
+           </div>
+         </div>
+
+         </div>
+         <script type="text/javascript">
+         $(document).ready(function(){
+           $('ul.tabs').tabs();
+         });
+         $(document).ready(function(){
+           $('ul.tabs').tabs('select_tab', 'tab_id');
+         });
+         </script>
+        {{/each}}
+      </li>
+ </ul>
+</div>
+
+
+
+
+
+<!---  day 3 -->
+
+
+<div class="day3">
+
+<ul class="collapsible z-depth-0" data-collapsible="expandable">
+   <li>
+     <div class="collapsible-header active blue white-text flow-text center-align" style>Breakfast</div>
+     {{#each breakfast_d3}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd3b1 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description213"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people213"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test3213"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices213"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours213"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description213" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people213" class="col s12">
+                  <div class="flow-text blue-text">People</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test3213" class="col s12">
+                  <div class="flow-text blue-text"> Food & Drinks
+</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices213" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours213" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+    </li>
+
+   <li>
+     <div class="collapsible-header active blue white-text flow-text center-align" style> Morning</div>
+     {{#each morning1_d3}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd3m1 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description1223"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people1223"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test31223"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices1223"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours1223"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description1223" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people1223" class="col s12">
+                  <div class="flow-text blue-text">History</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test31223" class="col s12">
+                  <div class="flow-text blue-text"> What to see</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices1223" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours1223" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+     {{#each morning2_d3}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd3m2 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description3233"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people3233"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test33233"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices3233"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours3233"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description3233" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people3233" class="col s12">
+                  <div class="flow-text blue-text">History</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test33233" class="col s12">
+                  <div class="flow-text blue-text"> What to see</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices3233" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours3233" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+   </li>
+   <li>
+     <div class="collapsible-header active blue white-text flow-text center-align" style>Lunch</div>
+     {{#each lunch_d3}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd3l1 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description2243"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people2243"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test32243"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices2243"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours2243"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description2243" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people2243" class="col s12">
+                  <div class="flow-text blue-text">People</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test32243" class="col s12">
+                  <div class="flow-text blue-text"> Food & Drinks</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices2243" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours2243" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+   </li>
+   <li>
+     <div class="collapsible-header  blue white-text flow-text center-align" style>afternoon</div>
+     {{#each afternoon1_d3}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd3a1 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description5253"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people5253"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test35253"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices5253"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours5253"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description5253" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people5253" class="col s12">
+                  <div class="flow-text blue-text">History</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test35253" class="col s12">
+                  <div class="flow-text blue-text"> What to see
+</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices5253" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours5253" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+     {{#each afternoon2_d3}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd3a2 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description6263"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people6263"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test36263"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices6263"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours6263"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description6263" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people6263" class="col s12">
+                  <div class="flow-text blue-text">History</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test36263" class="col s12">
+                  <div class="flow-text blue-text"> What to see
+</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices6263" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours6263" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+      </li>
+
+      <li>
+        <div class="collapsible-header  blue white-text flow-text center-align" style>Night</div>
+        {{#each night_d3}}
+        <div class="body">
+          <div class="row ">
+           <div class="col s12 m8 offset-l2">
+             <div class="card large">
+               <div class="card-image waves-effect waves-block waves-light ">
+                 <img class="activator" src="{{img_path1}}">
+               </div>
+               <div class="card-content">
+                 <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+                 <p style="padding: 0px;">{{Subtitle}}</p>
+               </div>
+               <div class="card-action">
+                 <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+                 <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+                 <a  refreshd3n1 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+               </div>
+               <div class="card-reveal">
+                 <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+                 <div class="row">
+                   <div class="col s12">
+                     <ul class="tabs" style="width:100%">
+                       <li class="tab col s2" style="min-width:20%"><a href="#description6273"><i class="material-icons blue-text">home</i> </a></li>
+                       <li class="tab col s2 " style="min-width:20%"><a href="#people6273"><i class="material-icons blue-text">face</i></a></li>
+                       <li class="tab col s2 " style="min-width:20%"><a href="#test36273"><i class="material-icons blue-text">crop_original</i></a></li>
+                       <li class="tab col s2 " style="min-width:20%"><a href="#prices6273"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                       <li class="tab col s2 " style="min-width:20%"><a href="#hours6273"><i class="material-icons blue-text">alarm</i> </a></li>
+                     </ul>
+                     <div class="indicator"></div>
+                     <br>
+                   </div>
+
+                   <div id="description6273" class="col s12">
+                     <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                     <p style="padding: 0px;">{{Description}}</p>
+                     <br>
+                     <div class="flow-text blue-text">MySecret</div>
+                     <p style="padding: 0px;">{{Description_Secret}}</p>
+                   </div>
+                   <div style="display: none;" id="people6273" class="col s12">
+                     <div class="flow-text blue-text">People</div>
+                     <p style="padding: 0px;">{{People_History}}</p>
+                     <br>
+                     <div class="flow-text blue-text">MySecret</div>
+                     <p style="padding: 0px;">{{People_Secret}}</p>
+                   </div>
+                   <div style="display: none;" id="test36273" class="col s12">
+                     <div class="flow-text blue-text"> Food & Drinks
+</div>
+                     <p style="padding: 0px;">{{Suggestion_See}}</p>
+                     <br>
+                     <div class="flow-text blue-text">MySecret</div>
+                     <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                   </div>
+                   <div style="display: none;" id="prices6273" class="col s12">
+                     <div class="flow-text blue-text">Prices</div>
+                     <p style="padding: 0px;">{{Money}}</p>
+                     <br>
+                     <div class="flow-text blue-text">MySecret</div>
+                     <p style="padding: 0px;">{{Money_Secret}}</p>
+                   </div>
+                   <div style="display: none;" id="hours6273" class="col s12">
+                     <div class="flow-text blue-text">Hours</div>
+                     <p style="padding: 0px;">{{Time}}</p>
+                     <br>
+                     <div class="flow-text blue-text">MySecret</div>
+                     <p style="padding: 0px;">{{Time_Secret}}</p>
+                   </div>
+                 </div>
+
+
+               </div>
+             </div>
+
+           </div>
+         </div>
+
+         </div>
+         <script type="text/javascript">
+         $(document).ready(function(){
+           $('ul.tabs').tabs();
+         });
+         $(document).ready(function(){
+           $('ul.tabs').tabs('select_tab', 'tab_id');
+         });
+         </script>
+        {{/each}}
+      </li>
+ </ul>
+</div>
+
+<!-- day 4 -->
+
+
+<div class="day4">
+
+<ul class="collapsible z-depth-0" data-collapsible="expandable">
+   <li>
+     <div class="collapsible-header active blue white-text flow-text center-align" style>Breakfast</div>
+     {{#each breakfast_d4}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd4b1 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description411"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people411"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test3411"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices411"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours411"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description411" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people411" class="col s12">
+                  <div class="flow-text blue-text">People</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test3411" class="col s12">
+                  <div class="flow-text blue-text"> Food & Drinks
+</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices411" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours411" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+    </li>
+
+   <li>
+     <div class="collapsible-header active blue white-text flow-text center-align" style> Morning</div>
+     {{#each morning1_d4}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd4m1 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description14441"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people14442"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test314443"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices14444"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours14445"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description14441" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people14442" class="col s12">
+                  <div class="flow-text blue-text">History</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test314443" class="col s12">
+                  <div class="flow-text blue-text"> What to see</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices14444" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours14445" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+     {{#each morning2_d4}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd4m2 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description31231"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people31232"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test331233"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices31234"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours31235"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description31231" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people31232" class="col s12">
+                  <div class="flow-text blue-text">History</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test331233" class="col s12">
+                  <div class="flow-text blue-text"> What to see</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices31234" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours31235" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+   </li>
+   <li>
+     <div class="collapsible-header active blue white-text flow-text center-align" style>Lunch</div>
+     {{#each lunch_d4}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd4l1 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description2a1"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people2a2"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test32a3"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices2a4"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours2a5"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description2a1" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people2a2" class="col s12">
+                  <div class="flow-text blue-text">People</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test32a3" class="col s12">
+                  <div class="flow-text blue-text"> Food & Drinks</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices2a4" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours2a5" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+   </li>
+   <li>
+     <div class="collapsible-header  blue white-text flow-text center-align" style>afternoon</div>
+     {{#each afternoon1_d4}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd4a1 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description5a"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people5as"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test35asd"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices5asdf"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours5asdfg"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description5a" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people5as" class="col s12">
+                  <div class="flow-text blue-text">History</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test35asd" class="col s12">
+                  <div class="flow-text blue-text"> What to see
+</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices5asdf" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours5asdfg" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+     {{#each afternoon2_d4}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd4a2 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description641"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people642"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test3643"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices644"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours645"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description641" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people642" class="col s12">
+                  <div class="flow-text blue-text">History</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test3643" class="col s12">
+                  <div class="flow-text blue-text"> What to see
+</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices644" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours645" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+      </li>
+
+      <li>
+        <div class="collapsible-header  blue white-text flow-text center-align" style>Night</div>
+        {{#each night_d4}}
+        <div class="body">
+          <div class="row ">
+           <div class="col s12 m8 offset-l2">
+             <div class="card large">
+               <div class="card-image waves-effect waves-block waves-light ">
+                 <img class="activator" src="{{img_path1}}">
+               </div>
+               <div class="card-content">
+                 <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+                 <p style="padding: 0px;">{{Subtitle}}</p>
+               </div>
+               <div class="card-action">
+                 <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+                 <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+                 <a  refreshd4n1 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+               </div>
+               <div class="card-reveal">
+                 <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+                 <div class="row">
+                   <div class="col s12">
+                     <ul class="tabs" style="width:100%">
+                       <li class="tab col s2" style="min-width:20%"><a href="#description699441"><i class="material-icons blue-text">home</i> </a></li>
+                       <li class="tab col s2 " style="min-width:20%"><a href="#people699442"><i class="material-icons blue-text">face</i></a></li>
+                       <li class="tab col s2 " style="min-width:20%"><a href="#test3699443"><i class="material-icons blue-text">crop_original</i></a></li>
+                       <li class="tab col s2 " style="min-width:20%"><a href="#prices699444"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                       <li class="tab col s2 " style="min-width:20%"><a href="#hours699445"><i class="material-icons blue-text">alarm</i> </a></li>
+                     </ul>
+                     <div class="indicator"></div>
+                     <br>
+                   </div>
+
+                   <div id="description699441" class="col s12">
+                     <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                     <p style="padding: 0px;">{{Description}}</p>
+                     <br>
+                     <div class="flow-text blue-text">MySecret</div>
+                     <p style="padding: 0px;">{{Description_Secret}}</p>
+                   </div>
+                   <div style="display: none;" id="people699442" class="col s12">
+                     <div class="flow-text blue-text">People</div>
+                     <p style="padding: 0px;">{{People_History}}</p>
+                     <br>
+                     <div class="flow-text blue-text">MySecret</div>
+                     <p style="padding: 0px;">{{People_Secret}}</p>
+                   </div>
+                   <div style="display: none;" id="test3699443" class="col s12">
+                     <div class="flow-text blue-text"> Food & Drinks
+</div>
+                     <p style="padding: 0px;">{{Suggestion_See}}</p>
+                     <br>
+                     <div class="flow-text blue-text">MySecret</div>
+                     <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                   </div>
+                   <div style="display: none;" id="prices699444" class="col s12">
+                     <div class="flow-text blue-text">Prices</div>
+                     <p style="padding: 0px;">{{Money}}</p>
+                     <br>
+                     <div class="flow-text blue-text">MySecret</div>
+                     <p style="padding: 0px;">{{Money_Secret}}</p>
+                   </div>
+                   <div style="display: none;" id="hours699445" class="col s12">
+                     <div class="flow-text blue-text">Hours</div>
+                     <p style="padding: 0px;">{{Time}}</p>
+                     <br>
+                     <div class="flow-text blue-text">MySecret</div>
+                     <p style="padding: 0px;">{{Time_Secret}}</p>
+                   </div>
+                 </div>
+
+
+               </div>
+             </div>
+
+           </div>
+         </div>
+
+         </div>
+         <script type="text/javascript">
+         $(document).ready(function(){
+           $('ul.tabs').tabs();
+         });
+         $(document).ready(function(){
+           $('ul.tabs').tabs('select_tab', 'tab_id');
+         });
+         </script>
+        {{/each}}
+      </li>
+ </ul>
+</div>
+
+
+
+<!-- day 5 -->
+
+
+<div class="day5">
+
+<ul class="collapsible z-depth-0" data-collapsible="expandable">
+   <li>
+     <div class="collapsible-header active blue white-text flow-text center-align" style>Breakfast</div>
+     {{#each breakfast_d5}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd5b1 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#descriptiond51"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#peopled52"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test3d53"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#pricesd54"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hoursd55"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="descriptiond51" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="peopled52" class="col s12">
+                  <div class="flow-text blue-text">People</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test3d53" class="col s12">
+                  <div class="flow-text blue-text"> Food & Drinks
+</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="pricesd54" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hoursd55" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+    </li>
+
+   <li>
+     <div class="collapsible-header active blue white-text flow-text center-align" style> Morning</div>
+     {{#each morning1_d5}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd5m1 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description151"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people152"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test3153"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices154"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours155"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description151" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people152" class="col s12">
+                  <div class="flow-text blue-text">History</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test3153" class="col s12">
+                  <div class="flow-text blue-text"> What to see</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices154" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours155" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+     {{#each morning2_d5}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd5m2 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description351"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people352"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test3353"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices354"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours355"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description351" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people352" class="col s12">
+                  <div class="flow-text blue-text">History</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test3353" class="col s12">
+                  <div class="flow-text blue-text"> What to see</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices354" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours355" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+   </li>
+   <li>
+     <div class="collapsible-header active blue white-text flow-text center-align" style>Lunch</div>
+     {{#each lunch_d5}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd5l1 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description251"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people252"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test3253"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices254"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours255"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description251" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people252" class="col s12">
+                  <div class="flow-text blue-text">People</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test3253" class="col s12">
+                  <div class="flow-text blue-text"> Food & Drinks</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices254" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours255" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+   </li>
+   <li>
+     <div class="collapsible-header  blue white-text flow-text center-align" style>afternoon</div>
+     {{#each afternoon1_d5}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd5a1 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description551"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people552"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test3553"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices554"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours555"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description551" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people552" class="col s12">
+                  <div class="flow-text blue-text">History</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test3553" class="col s12">
+                  <div class="flow-text blue-text"> What to see
+</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices554" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours555" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+     {{#each afternoon2_d5}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd5a2 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description651"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people652"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test3653"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices654"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours655"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description651" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people652" class="col s12">
+                  <div class="flow-text blue-text">History</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test3653" class="col s12">
+                  <div class="flow-text blue-text"> What to see
+</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices654" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours655" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+      </li>
+
+      <li>
+        <div class="collapsible-header  blue white-text flow-text center-align" style>Night</div>
+        {{#each night_d5}}
+        <div class="body">
+          <div class="row ">
+           <div class="col s12 m8 offset-l2">
+             <div class="card large">
+               <div class="card-image waves-effect waves-block waves-light ">
+                 <img class="activator" src="{{img_path1}}">
+               </div>
+               <div class="card-content">
+                 <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+                 <p style="padding: 0px;">{{Subtitle}}</p>
+               </div>
+               <div class="card-action">
+                 <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+                 <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+                 <a  refreshd5n1 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+               </div>
+               <div class="card-reveal">
+                 <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+                 <div class="row">
+                   <div class="col s12">
+                     <ul class="tabs" style="width:100%">
+                       <li class="tab col s2" style="min-width:20%"><a href="#description69951"><i class="material-icons blue-text">home</i> </a></li>
+                       <li class="tab col s2 " style="min-width:20%"><a href="#people69952"><i class="material-icons blue-text">face</i></a></li>
+                       <li class="tab col s2 " style="min-width:20%"><a href="#test369953"><i class="material-icons blue-text">crop_original</i></a></li>
+                       <li class="tab col s2 " style="min-width:20%"><a href="#prices69954"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                       <li class="tab col s2 " style="min-width:20%"><a href="#hours69955"><i class="material-icons blue-text">alarm</i> </a></li>
+                     </ul>
+                     <div class="indicator"></div>
+                     <br>
+                   </div>
+
+                   <div id="description69951" class="col s12">
+                     <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                     <p style="padding: 0px;">{{Description}}</p>
+                     <br>
+                     <div class="flow-text blue-text">MySecret</div>
+                     <p style="padding: 0px;">{{Description_Secret}}</p>
+                   </div>
+                   <div style="display: none;" id="people69952" class="col s12">
+                     <div class="flow-text blue-text">People</div>
+                     <p style="padding: 0px;">{{People_History}}</p>
+                     <br>
+                     <div class="flow-text blue-text">MySecret</div>
+                     <p style="padding: 0px;">{{People_Secret}}</p>
+                   </div>
+                   <div style="display: none;" id="test369953" class="col s12">
+                     <div class="flow-text blue-text"> Food & Drinks
+</div>
+                     <p style="padding: 0px;">{{Suggestion_See}}</p>
+                     <br>
+                     <div class="flow-text blue-text">MySecret</div>
+                     <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                   </div>
+                   <div style="display: none;" id="prices69954" class="col s12">
+                     <div class="flow-text blue-text">Prices</div>
+                     <p style="padding: 0px;">{{Money}}</p>
+                     <br>
+                     <div class="flow-text blue-text">MySecret</div>
+                     <p style="padding: 0px;">{{Money_Secret}}</p>
+                   </div>
+                   <div style="display: none;" id="hours69955" class="col s12">
+                     <div class="flow-text blue-text">Hours</div>
+                     <p style="padding: 0px;">{{Time}}</p>
+                     <br>
+                     <div class="flow-text blue-text">MySecret</div>
+                     <p style="padding: 0px;">{{Time_Secret}}</p>
+                   </div>
+                 </div>
+
+
+               </div>
+             </div>
+
+           </div>
+         </div>
+
+         </div>
+         <script type="text/javascript">
+         $(document).ready(function(){
+           $('ul.tabs').tabs();
+         });
+         $(document).ready(function(){
+           $('ul.tabs').tabs('select_tab', 'tab_id');
+         });
+         </script>
+        {{/each}}
+      </li>
+ </ul>
+</div>
+
+
+<!---  day 6 -->
+
+<div class="day6">
+
+<ul class="collapsible z-depth-0" data-collapsible="expandable">
+   <li>
+     <div class="collapsible-header active blue white-text flow-text center-align" style>Breakfast</div>
+     {{#each breakfast_d6}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd6b1 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description61"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people62"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test363"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices64"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours65"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description61" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people62" class="col s12">
+                  <div class="flow-text blue-text">People</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test363" class="col s12">
+                  <div class="flow-text blue-text"> Food & Drinks
+</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices64" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours65" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+    </li>
+
+   <li>
+     <div class="collapsible-header active blue white-text flow-text center-align" style> Morning</div>
+     {{#each morning1_d6}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd6m1 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description161"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people162"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test3163"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices164"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours165"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description161" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people162" class="col s12">
+                  <div class="flow-text blue-text">History</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test3163" class="col s12">
+                  <div class="flow-text blue-text"> What to see</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices164" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours165" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+     {{#each morning2_d6}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd6m2 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description361"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people362"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test3363"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices364"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours365"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description361" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people362" class="col s12">
+                  <div class="flow-text blue-text">History</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test3363" class="col s12">
+                  <div class="flow-text blue-text"> What to see</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices364" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours365" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+   </li>
+   <li>
+     <div class="collapsible-header active blue white-text flow-text center-align" style>Lunch</div>
+     {{#each lunch_d6}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd6l1 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description261"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people262"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test3263"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices264"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours265"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description261" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people262" class="col s12">
+                  <div class="flow-text blue-text">People</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test3263" class="col s12">
+                  <div class="flow-text blue-text"> Food & Drinks</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices264" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours265" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+   </li>
+   <li>
+     <div class="collapsible-header  blue white-text flow-text center-align" style>afternoon</div>
+     {{#each afternoon1_d6}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd6a1 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description561"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people562"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test3563"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices564"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours565"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description561" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people562" class="col s12">
+                  <div class="flow-text blue-text">History</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test3563" class="col s12">
+                  <div class="flow-text blue-text"> What to see
+</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices564" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours565" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+     {{#each afternoon2_d6}}
+     <div class="body">
+       <div class="row ">
+        <div class="col s12 m8 offset-l2">
+          <div class="card large">
+            <div class="card-image waves-effect waves-block waves-light ">
+              <img class="activator" src="{{img_path1}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+              <p style="padding: 0px;">{{Subtitle}}</p>
+            </div>
+            <div class="card-action">
+              <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+              <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+              <a  refreshd6a2 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs" style="width:100%">
+                    <li class="tab col s2" style="min-width:20%"><a href="#description661"><i class="material-icons blue-text">home</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#people662"><i class="material-icons blue-text">face</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#test3663"><i class="material-icons blue-text">crop_original</i></a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#prices664"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                    <li class="tab col s2 " style="min-width:20%"><a href="#hours665"><i class="material-icons blue-text">alarm</i> </a></li>
+                  </ul>
+                  <div class="indicator"></div>
+                  <br>
+                </div>
+
+                <div id="description661" class="col s12">
+                  <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                  <p style="padding: 0px;">{{Description}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Description_Secret}}</p>
+                </div>
+                <div style="display: none;" id="people662" class="col s12">
+                  <div class="flow-text blue-text">History</div>
+                  <p style="padding: 0px;">{{People_History}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{People_Secret}}</p>
+                </div>
+                <div style="display: none;" id="test363" class="col s12">
+                  <div class="flow-text blue-text">What to see
+</div>
+                  <p style="padding: 0px;">{{Suggestion_See}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                </div>
+                <div style="display: none;" id="prices664" class="col s12">
+                  <div class="flow-text blue-text">Prices</div>
+                  <p style="padding: 0px;">{{Money}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Money_Secret}}</p>
+                </div>
+                <div style="display: none;" id="hours665" class="col s12">
+                  <div class="flow-text blue-text">Hours</div>
+                  <p style="padding: 0px;">{{Time}}</p>
+                  <br>
+                  <div class="flow-text blue-text">MySecret</div>
+                  <p style="padding: 0px;">{{Time_Secret}}</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+      $(document).ready(function(){
+        $('ul.tabs').tabs('select_tab', 'tab_id');
+      });
+      </script>
+     {{/each}}
+      </li>
+
+      <li>
+        <div class="collapsible-header  blue white-text flow-text center-align" style>Night</div>
+        {{#each night_d6}}
+        <div class="body">
+          <div class="row ">
+           <div class="col s12 m8 offset-l2">
+             <div class="card large">
+               <div class="card-image waves-effect waves-block waves-light ">
+                 <img class="activator" src="{{img_path1}}">
+               </div>
+               <div class="card-content">
+                 <span class="card-title activator grey-text text-darken-4"> {{Attraction_Name}}<i class="material-icons right">more_vert</i></span>
+                 <p style="padding: 0px;">{{Subtitle}}</p>
+               </div>
+               <div class="card-action">
+                 <a href="https://www.google.gr/maps/search/{{address}}" target="_blank" ><i class="material-icons blue-text">location_on</i>
+</a>
+                 <a href="#" class="blue-text"><!-- edw 8a mpei to facebook --></a>
+                 <a  refreshd6n1 style="float:right; margin-right:0px" href ="#" class="blue-text ">Change it</a>
+               </div>
+               <div class="card-reveal">
+                 <span class="card-title grey-text text-darken-4">{{Attraction_Name}}<i class="material-icons right">close</i></span>
+
+                 <div class="row">
+                   <div class="col s12">
+                     <ul class="tabs" style="width:100%">
+                       <li class="tab col s2" style="min-width:20%"><a href="#description69961"><i class="material-icons blue-text">home</i> </a></li>
+                       <li class="tab col s2 " style="min-width:20%"><a href="#people69962"><i class="material-icons blue-text">face</i></a></li>
+                       <li class="tab col s2 " style="min-width:20%"><a href="#test369963"><i class="material-icons blue-text">crop_original</i></a></li>
+                       <li class="tab col s2 " style="min-width:20%"><a href="#prices69964"><i class="material-icons blue-text">euro_symbol</i> </a></li>
+                       <li class="tab col s2 " style="min-width:20%"><a href="#hours69965"><i class="material-icons blue-text">alarm</i> </a></li>
+                     </ul>
+                     <div class="indicator"></div>
+                     <br>
+                   </div>
+
+                   <div id="description69961" class="col s12">
+                     <div class="flow-text blue-text">Description of {{Attraction_Name}}</div>
+                     <p style="padding: 0px;">{{Description}}</p>
+                     <br>
+                     <div class="flow-text blue-text">MySecret</div>
+                     <p style="padding: 0px;">{{Description_Secret}}</p>
+                   </div>
+                   <div style="display: none;" id="people69962" class="col s12">
+                     <div class="flow-text blue-text">People</div>
+                     <p style="padding: 0px;">{{People_History}}</p>
+                     <br>
+                     <div class="flow-text blue-text">MySecret</div>
+                     <p style="padding: 0px;">{{People_Secret}}</p>
+                   </div>
+                   <div style="display: none;" id="test369963" class="col s12">
+                     <div class="flow-text blue-text"> Food & Drinks
+</div>
+                     <p style="padding: 0px;">{{Suggestion_See}}</p>
+                     <br>
+                     <div class="flow-text blue-text">MySecret</div>
+                     <p style="padding: 0px;">{{Suggestion_Secret_Do}}</p>
+                   </div>
+                   <div style="display: none;" id="prices69964" class="col s12">
+                     <div class="flow-text blue-text">Prices</div>
+                     <p style="padding: 0px;">{{Money}}</p>
+                     <br>
+                     <div class="flow-text blue-text">MySecret</div>
+                     <p style="padding: 0px;">{{Money_Secret}}</p>
+                   </div>
+                   <div style="display: none;" id="hours69965" class="col s12">
+                     <div class="flow-text blue-text">Hours</div>
+                     <p style="padding: 0px;">{{Time}}</p>
+                     <br>
+                     <div class="flow-text blue-text">MySecret</div>
+                     <p style="padding: 0px;">{{Time_Secret}}</p>
+                   </div>
+                 </div>
+
+
+               </div>
+             </div>
+
+           </div>
+         </div>
+
+         </div>
+         <script type="text/javascript">
+         $(document).ready(function(){
+           $('ul.tabs').tabs();
+         });
+         $(document).ready(function(){
+           $('ul.tabs').tabs('select_tab', 'tab_id');
+         });
+         </script>
+        {{/each}}
+      </li>
+ </ul>
+</div>
+
+
+<!---  day 2 -->
+
+
+
+
+
+
+
+
+
+
+ </div>
+
+
+
+
+
+
+
+
+ <!--- day2 -->
+
+
+
+
+
+
+
+  </body>
+
+
+
+
+
+
+  <script type="text/javascript">
+  $('.parallax').parallax();
+  $('.button-collapse').sideNav({
+      menuWidth: 240, // Default is 240
+      edge: 'right', // Choose the horizontal origin
+      closeOnClick: false // Closes side-nav on <a> clicks, useful for Angular/Meteor
+    }
+  );
+
+  $(document).ready(function(){
+    $('.collapsible').collapsible({
+      accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+    });
+  });
+
+
+
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+  <script type="text/javascript">
+  days= parseInt(localStorage.getItem("days"))+1;
+
+  $('.day2').hide();
+  $('.day2').hide();
+  $('.day3').hide();
+  $('.day4').hide();
+  $('.day5').hide();
+  $('.day6').hide();
+
+if (days<6) {
+  $("#6").hide()
+};
+if (days<5) {
+  $("#5").hide()
+};
+if (days<4) {
+  $("#4").hide()
+};
+if (days<3) {
+  $("#3").hide()
+};
+if (days<2) {
+  $("#2").hide()
+};
+
+  $("#gohome").click(function(){
+    window.location.href = '/';
+
+});
+$("#gohome3").click(function(){
+  window.location.href = '/';
+
+});
+$("#gosignup").click(function(){
+  window.location.href = '/signup';
+
+});
+$("#gologin").click(function(){
+window.location.href = '/login';
+
+});
+
+
+
+$("#gosignup1").click(function(){
+window.location.href = '/signup';
+
+});
+$("#gologin1").click(function(){
+window.location.href = '/login';
+
+});
+$("#goprogram").click(function(){
+window.location.href = '/program';
+
+});
+
+$(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+  </script>
+
+
+
+</template>

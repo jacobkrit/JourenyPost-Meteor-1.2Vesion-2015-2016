@@ -1,0 +1,127 @@
+
+<template name="login">
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80253065-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  <body>
+    <nav class="white z-depth-1" role="navigation">
+      <div class="nav-wrapper container">
+        <a  href="#" class="brand-logo" >
+          <span class="bold center orange-text  text-lighten-2" style="font-weight:med; ">login </span>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li >
+          </li>
+        </ul>
+
+        <ul id="nav-mobile" class="side-nav ">
+          <li class=" blue z-depth-1">          <h4 class="bold center orange-text  text-lighten-2" style="font-weight:bold; text-shadow: 2px 6px 15px black">JOURNEYPOST</h4>
+  </li>
+          <li ><a id="gohome"  class="blue-text flow-text z-depth-1 waves-effect waves-light"><strong>Home</strong></a></li>
+
+        </ul>
+        <a id="goback" class="grey-text hide-on-med-and-up"><i class="material-icons">keyboard_arrow_left</i></a>
+        <a href="#" data-activates="nav-mobile" class="button-collapse grey-text"></a>
+
+      </div>
+
+
+    </nav>
+
+    <img src="images/EEMG_4680.JPG" class="z-depth-1" width="100%" height="auto" >
+
+    <div class="row  container" >
+      <div  class="col l9 offset-l1 s12   " >
+        <div class="card-panel white z-depth-1 ">
+
+  <br>
+          <span class="blue-text  flow-text">Enter your details
+
+   </span><br><br>
+          <div class="row">
+<form class="col s12">
+<div class="row">
+
+    <div class="input-field  col s12">
+      <i class="material-icons prefix">people</i>
+      <input id="icon_prefix_email" type="text" class="validate">
+      <label for="icon_prefix_email">Username</label>
+    </div>
+    <div class="input-field  col s12">
+      <i class="material-icons prefix">perm_identity</i>
+      <input id="icon_prefix_Country" type="text" class="validate">
+      <label for="icon_prefix_Country">Hotel Code </label>
+    </div>
+<br>
+
+</div>
+
+<button connect class="btn waves-effect waves-light right blue">Submit
+<i class="material-icons right">send</i>
+</button>
+</form>
+
+</div>
+        </div>
+        <p class="black-text  " style="float:right">if you dont have  an account  <a id="gosignup2"><strong class="red-text"><u>signup</u></strong> </a> now  </p>
+
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+  </body>
+
+
+<script type="text/javascript">
+$("#gohome").click(function(){
+  window.location.href = '/';
+
+});
+$("#gosignup2").click(function(){
+  window.location.href = '/signup';
+
+});
+</script>
+
+
+
+  <script type="text/javascript">
+  $('.parallax').parallax();
+  $('.button-collapse').sideNav({
+      menuWidth: 240, // Default is 240
+      edge: 'right', // Choose the horizontal origin
+      closeOnClick: false // Closes side-nav on <a> clicks, useful for Angular/Meteor
+    }
+  );
+  $('.datepicker').pickadate({
+   selectMonths: true, // Creates a dropdown to control month
+   selectYears: 15 // Creates a dropdown of 15 years to control year
+ });
+
+ var date1 = new Date(document.getElementById("fday").value);
+ var date2 = new Date(document.getElementById("lday").value);
+
+ var difference = date2 - date1;
+
+ var days = difference/(24*3600*1000);
+
+   days=parseInt(days);
+
+
+  </script>
+</template>

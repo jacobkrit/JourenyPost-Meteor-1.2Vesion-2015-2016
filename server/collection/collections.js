@@ -1,0 +1,13 @@
+Vuide_Program = new Mongo.Collection("vuide_program");
+Priority_Attractions = new Mongo.Collection("priority_attractions");
+Priority_Restaurants = new Mongo.Collection("priority_restaurants");
+Priority_Fun = new Mongo.Collection("priority_fun");
+Priority_Relaxation = new Mongo.Collection("priority_relaxation");
+Priority_Shopping = new Mongo.Collection("priority_shopping");
+Breakfast = new Mongo.Collection("breakfast");			//ftia3e new collection
+Morning = new Mongo.Collection("morning");
+Lunch = new Mongo.Collection("lunch");
+Afternoon = new Mongo.Collection("afternoon");
+Night = new Mongo.Collection("night");
+Activities = new Mongo.Collection("activities");
+Users = new Mongo.Collection("users");      //ftia3e new collection
